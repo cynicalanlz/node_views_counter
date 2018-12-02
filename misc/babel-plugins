@@ -1,0 +1,11 @@
+module.exports = function() {
+  return {
+    plugins: [
+      "literals",
+      "spread",
+      "sticky-regex",
+      "template-literals"
+    ]
+  };
+}
+

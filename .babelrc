@@ -1,0 +1,6 @@
+{
+  "presets": [
+    "myPreset",
+    "babel-preset-myPreset" // equivalent
+  ]
+}
