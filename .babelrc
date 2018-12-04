@@ -1,6 +1,9 @@
 {
   "presets": [
-    "myPreset",
-    "babel-preset-myPreset" // equivalent
+    ["@babel/preset-env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
   ]
 }
