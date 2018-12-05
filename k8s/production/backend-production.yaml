@@ -15,20 +15,20 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
-  name: last_minute_pageviews-backend-production
+  name: last-minute-pageviews-backend-production
 spec:
   replicas: 1
   template:
     metadata:
       name: backend
       labels:
-        app: last_minute_pageviews
+        app: last-minute-pageviews
         role: backend
         env: production
     spec:
       containers:
       - name: backend
-        image: gcr.io/jenkins-deploy-224517/last_minute_pageviews:latest
+        image: gcr.io/jenkins-deploy-224517/last-minute-pageviews:latest
         resources:
           limits:
             memory: "500Mi"

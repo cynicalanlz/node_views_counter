@@ -15,7 +15,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: last_minute_pageviews-backend
+  name: last-minute-pageviews-backend
 spec:
   ports:
   - name: http
@@ -24,4 +24,4 @@ spec:
     protocol: TCP
   selector:
     role: backend
-    app: last_minute_pageviews
+    app: last-minute-pageviews
