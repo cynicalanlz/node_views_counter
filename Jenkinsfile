@@ -1,4 +1,4 @@
-def project = 'jenkins-deploy-224517'
+def  project = 'jenkins-deploy-224517'
 def  appName = 'last_minute_pageviews'
 def  feSvcName = "${appName}-backend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
