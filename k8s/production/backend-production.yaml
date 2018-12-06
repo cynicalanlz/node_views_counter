@@ -38,9 +38,3 @@ spec:
         ports:
         - name: backend
           containerPort: 8081
-        ports:
-        - name: redis
-          containerPort: 6380
-        ports:
-        - name: ssh
-          containerPort: 22
