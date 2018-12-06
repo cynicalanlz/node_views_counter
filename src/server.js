@@ -3,7 +3,7 @@ const redis = require('redis');
 const async = require('async');
 const winston = require('winston');
 
-let client = redis.createClient();
+let client = redis.createClient({port: 6380});
 let app = express();
 
 const logger = winston.createLogger({
