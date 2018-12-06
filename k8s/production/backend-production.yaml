@@ -34,10 +34,10 @@ spec:
             memory: "500Mi"
             cpu: "100m"
         imagePullPolicy: Always
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 8081
+#        readinessProbe:
+#          httpGet:
+#            path: /
+#            port: 8081
         command: ["node", "app.js"]
         ports:
         - name: backend
