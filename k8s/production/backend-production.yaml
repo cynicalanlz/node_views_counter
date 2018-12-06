@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: gcr.io/jenkins-deploy-224517/last-minute-pageviews:latest
+        image: gcr.io/jenkins-deploy-v2/last-minute-pageviews:latest
         resources:
           limits:
             memory: "500Mi"
@@ -36,9 +36,9 @@ spec:
         imagePullPolicy: Always
         readinessProbe:
           httpGet:
-            path: /healthz
+            path: /
             port: 8080
-        command: ["node", "app.js -port=8080"]
+        command: ["node", "app.js"]
         ports:
         - name: backend
           containerPort: 8080

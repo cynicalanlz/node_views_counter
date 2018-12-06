@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
     client.incr(timestamp);
     client.keys('*', function (err, keys) {
         if (err) {
-            res.json(err)
+            res.json(err);
             return
         }
         if (keys) {

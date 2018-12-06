@@ -17,6 +17,7 @@ apiVersion: v1
 metadata:
   name: last-minute-pageviews-backend
 spec:
+  type: NodePort
   ports:
   - name: http
     port: 8080
