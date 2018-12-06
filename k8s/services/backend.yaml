@@ -23,6 +23,10 @@ spec:
     port: 8081
     targetPort: 8081
     protocol: TCP
+  - name: redis
+    port: 6380
+    targetPort: 6380
+    protocol: TCP
   selector:
     role: backend
     app: last-minute-pageviews
