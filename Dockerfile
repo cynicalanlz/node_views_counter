@@ -14,6 +14,7 @@ RUN apt-get update
 RUN groupadd -r redis && useradd -r -g redis redis
 RUN mkdir /data && chown redis:redis /data
 RUN apt-get install -y redis-server supervisor
+RUN which node
 VOLUME /data
 WORKDIR /app
 RUN npm install
