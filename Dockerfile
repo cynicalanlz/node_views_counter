@@ -10,15 +10,14 @@ COPY --from=0 /app/package.json /app/package.json
 COPY --from=0 /app/start.sh /app/start.sh
 COPY --from=0 /app/supervisor.conf /app/supervisor.conf
 RUN export NODE_ENV=production
-RUN apt-get update
 RUN groupadd -r redis && useradd -r -g redis redis
 RUN mkdir /data && chown redis:redis /data
+RUN apt-get update
 RUN apt-get install -y redis-server supervisor
+RUN systemctl enable redis-server
 VOLUME /data
 WORKDIR /app
 RUN npm install
-RUN echo "Still here"
 EXPOSE 8081
-#CMD ["sh", "start.sh"]
-CMD ["redis-server", "--port 6380"]
+CMD ["node app.js"]
 RUN echo "Still here"
