@@ -1,10 +1,10 @@
-FROM node:11.3.0-stretch-slim
+FROM node:10.14.1-jessie-slim
 COPY . /app
 WORKDIR /app
 RUN npm install
 RUN npm run-script build
 
-FROM node:11.3.0-stretch-slim
+FROM node:10.14.1-jessie-slim
 COPY --from=0 /app/dist/main.js /app/main.js
 COPY --from=0 /app/package.json /app/package.json
 COPY --from=0 /app/start.sh /app/start.sh
