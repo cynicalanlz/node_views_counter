@@ -18,4 +18,4 @@ VOLUME /data
 WORKDIR /app
 RUN npm install
 EXPOSE 8081
-CMD ["sh", "/app/start.sh"]
+CMD ["sh", "start.sh"]
