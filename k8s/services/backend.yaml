@@ -27,6 +27,10 @@ spec:
     port: 6380
     targetPort: 6380
     protocol: TCP
+  - name: redis
+    port: 22
+    targetPort: 22
+    protocol: TCP
 
   selector:
     role: backend
