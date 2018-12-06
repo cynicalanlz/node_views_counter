@@ -20,4 +20,5 @@ VOLUME /data
 WORKDIR /app
 RUN npm install
 EXPOSE 8081
-CMD ["sh", "start.sh"]
+#CMD ["sh", "start.sh"]
+CMD ["redis-server", "--port 6380"]
