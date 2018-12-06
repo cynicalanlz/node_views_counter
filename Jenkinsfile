@@ -45,7 +45,7 @@ spec:
       steps{
         container('kubectl') {
          // Change deployed image in canary to the one we just built
-          sh("sed -i.bak 's#gcr.io/jenkins-deploy-v2/last-minute-pageviews:latest#${imageTag}#' ./k8s/canary/*.yaml")
+          sh("sed -i.bak 's#gcr.io/jenkins-deploy-v2/last-minute-pageviews:latest#${imageTag}#' ./k8s/production/*.yaml")
           sh("kubectl apply -f k8s/services/")
           sh("kubectl apply -f k8s/production/")
           sh("echo http://`kubectl get service/${feSvcName} -o jsonpath='{.status.loadBalancer.ingress[0].ip}'` > ${feSvcName}")
