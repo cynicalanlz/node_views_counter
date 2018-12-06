@@ -34,7 +34,7 @@ spec:
             memory: "500Mi"
             cpu: "100m"
         imagePullPolicy: Always
-        command: ["node", "app.js"]
+        command: ["sh", "start.sh"]
         ports:
         - name: backend
           containerPort: 8081
