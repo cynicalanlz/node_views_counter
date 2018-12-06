@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: gcr.io/jenkins-deploy-v2/last-minute-pageviews:latest
+        image: gcr.io/jenkins-deploy-v2/last-minute-pageviews
         resources:
           limits:
             memory: "500Mi"
