@@ -84,4 +84,3 @@ WORKDIR /app
 RUN npm install
 EXPOSE 8081
 CMD ["sh", "start.sh"]
-RUN echo "Still here"
